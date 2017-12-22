@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignViewController">
+            <connections>
+                <outlet property="backBtn" destination="dm1-0v-aV1" id="QDN-8T-R8l"/>
+                <outlet property="drawView" destination="jLU-1d-wbg" id="rxL-mU-qHk"/>
+                <outlet property="resignBtn" destination="aP9-hO-oAa" id="dEz-pA-9Kd"/>
+                <outlet property="sureBtn" destination="bDu-Wf-qUD" id="7uH-Il-2vh"/>
+                <outlet property="view" destination="Bbm-LY-QIp" id="5wN-TY-a6V"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Bbm-LY-QIp">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-1d-wbg" customClass="DrawingBoardView">
+                    <rect key="frame" x="16" y="16" width="343" height="587"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP9-hO-oAa">
+                    <rect key="frame" x="135.5" y="619" width="104" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Yrn-4R-w4a"/>
+                        <constraint firstAttribute="width" constant="104" id="Z39-mX-eYH"/>
+                        <constraint firstAttribute="width" constant="104" id="dRb-lP-4C6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="重签">
+                        <color key="titleColor" red="0.33333333329999998" green="0.34509803919999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dRb-lP-4C6"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="dRb-lP-4C6"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="resignBtnClick:" destination="-1" eventType="touchUpInside" id="wHw-SI-atJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm1-0v-aV1">
+                    <rect key="frame" x="23" y="619" width="104" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="退出签约">
+                        <color key="titleColor" red="0.33333333329999998" green="0.34509803919999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="JaU-K0-BoH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDu-Wf-qUD">
+                    <rect key="frame" x="247" y="619" width="104" height="32"/>
+                    <color key="backgroundColor" red="0.2156862745" green="0.38823529410000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sureBtnClick:" destination="-1" eventType="touchUpInside" id="ifR-iB-bR3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="width" secondItem="dm1-0v-aV1" secondAttribute="width" id="20k-3W-PDk"/>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="top" secondItem="dm1-0v-aV1" secondAttribute="top" id="Ugv-mc-52i"/>
+                <constraint firstAttribute="bottom" secondItem="aP9-hO-oAa" secondAttribute="bottom" constant="16" id="b7s-KD-gR6"/>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="top" secondItem="jLU-1d-wbg" secondAttribute="bottom" constant="16" id="kCa-Lj-B1y"/>
+                <constraint firstItem="bDu-Wf-qUD" firstAttribute="width" secondItem="dm1-0v-aV1" secondAttribute="width" id="lQr-g6-vLk"/>
+                <constraint firstItem="bDu-Wf-qUD" firstAttribute="height" secondItem="dm1-0v-aV1" secondAttribute="height" id="lkS-vA-g9X"/>
+                <constraint firstItem="bDu-Wf-qUD" firstAttribute="top" secondItem="dm1-0v-aV1" secondAttribute="top" id="rl9-eK-88B"/>
+                <constraint firstItem="bDu-Wf-qUD" firstAttribute="leading" secondItem="aP9-hO-oAa" secondAttribute="trailing" constant="8" id="t8j-Ui-ImP"/>
+                <constraint firstAttribute="trailing" secondItem="jLU-1d-wbg" secondAttribute="trailing" constant="16" id="tnk-oV-2A7"/>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="leading" secondItem="dm1-0v-aV1" secondAttribute="trailing" constant="8" id="uTy-4Q-fiW"/>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="height" secondItem="dm1-0v-aV1" secondAttribute="height" id="vPI-l8-tVv"/>
+                <constraint firstItem="bDu-Wf-qUD" firstAttribute="leading" secondItem="aP9-hO-oAa" secondAttribute="trailing" constant="8" id="vZv-kg-9NB"/>
+                <constraint firstItem="aP9-hO-oAa" firstAttribute="centerX" secondItem="Bbm-LY-QIp" secondAttribute="centerX" id="wyk-mU-D0e"/>
+                <constraint firstItem="jLU-1d-wbg" firstAttribute="leading" secondItem="Bbm-LY-QIp" secondAttribute="leading" constant="16" id="y5f-t3-T91"/>
+                <constraint firstItem="jLU-1d-wbg" firstAttribute="top" secondItem="Bbm-LY-QIp" secondAttribute="top" constant="16" id="zR4-OX-EAV"/>
+            </constraints>
+            <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="t8j-Ui-ImP"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="t8j-Ui-ImP"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-340" y="856"/>
+        </view>
+    </objects>
+</document>
